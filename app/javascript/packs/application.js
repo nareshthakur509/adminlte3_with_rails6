@@ -7,18 +7,22 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+import 'bootstrap';
+import '../stylesheets/application';
+require('admin-lte');
+import "@fortawesome/fontawesome-free/js/all";
 //jquery part
 var jQuery = require("jquery");
 
 global.$ = global.jQuery = jQuery;
 window.$ = window.jquery = jQuery;
 
-// import scss
-import "../stylesheets/application.scss"
+document.addEventListener("turbolinks:load", () => {
+  $('[data-toggle="tooltip"]').tooltip()
+});
 
-//admin lte js
-require('admin-lte')
-import "admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min"
+
+
 
 // font part
 
