@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css" integrity="sha512-RPxGl20NcAUAq1+Tfj8VjurpvkZaep2DeCgOfQ6afXSEgcvrLE6XxDG2aacvwjdyheM/bkwaLVc7kk82+mafkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   </head>
 
   <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
@@ -48,13 +48,18 @@
         
 
         <div>
-          <%
+  
+<%
 =begin%>
- <div class="preloader flex-column justify-content-center align-items-center">
+   
+          <div class="preloader flex-column justify-content-center align-items-center">
              <img class="animation__wobble" src="/assets/AdminLTELogo.png" alt="AdminLTELogo" height="50" width="50">
-          </div> 
+          </div>   
 <%
 =end%>
+
+
+           <div id="loading"></div>
            <%= yield %>
         </div>
         <%= render "base/footer" %>
