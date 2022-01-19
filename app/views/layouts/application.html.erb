@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AdminLte3</title>
+    <title> Rails6 AdminLTE 3.0</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'adminlte.css' %>
-    <%= stylesheet_link_tag 'adminlte.min.css' %>
-    <%= stylesheet_link_tag 'ionicons.min.css' %>
-    <%= stylesheet_link_tag 'tempusdominus-bootstrap-4.min.css' %>
-    <%= stylesheet_link_tag 'OverlayScrollbars.min.css' %>
-    <%= stylesheet_link_tag 'daterangepicker.css' %>
-    <%= stylesheet_link_tag 'summernote-bs4.css' %>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    
+      <!-- Google Font: Source Sans Pro -->
 
-    
-    
-    
-    
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <%# <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> %>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <%# <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <%# <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css" integrity="sha512-8vq2g5nHE062j3xor4XxPeZiPjmRDh6wlufQlfC6pdQ/9urJkU07NM0tEREeymP++NczacJ/Q59ul+/K2eYvcg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- JQVMap -->
+  <%# <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css" integrity="sha512-RPxGl20NcAUAq1+Tfj8VjurpvkZaep2DeCgOfQ6afXSEgcvrLE6XxDG2aacvwjdyheM/bkwaLVc7kk82+mafkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Theme style -->
+  <%# <link rel="stylesheet" href="dist/css/adminlte.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0-rc/css/adminlte.min.css" integrity="sha512-YOsl4pnOb5NC868yn1JxAzjJsWkLNtP53uc3OcyAl0Q2R1cwo/mdI1hHSQM8gbIxWj97mKeLoD9R0aiYibFQAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- overlayScrollbars -->
+  <%# <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css" integrity="sha512-jN4O0AUkRmE6Jwc8la2I5iBmS+tCDcfUd1eq8nrZIBnDKTmCp5YxxNN1/aetnAH32qT+dDbk1aGhhoaw5cJNlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Daterange picker -->
+  <%# <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- summernote -->
+  <%# <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css" integrity="sha512-RPxGl20NcAUAq1+Tfj8VjurpvkZaep2DeCgOfQ6afXSEgcvrLE6XxDG2aacvwjdyheM/bkwaLVc7kk82+mafkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
       <div class="wrapper">
         <%= render "base/header" %>
         <%= render "base/sidebar" %>
+        
 
-
-          <div class="content container-fluid">
-            <div class="container-fluid">
-              <%= yield %>
-            </div>
-          </div>
+        <div>
+          <%
+=begin%>
+ <div class="preloader flex-column justify-content-center align-items-center">
+             <img class="animation__wobble" src="/assets/AdminLTELogo.png" alt="AdminLTELogo" height="50" width="50">
+          </div> 
+<%
+=end%>
+           <%= yield %>
         </div>
-
         <%= render "base/footer" %>
         <%= render "base/control_sidebar" %>
       <div>

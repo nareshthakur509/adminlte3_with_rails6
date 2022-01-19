@@ -1,7 +1,7 @@
    <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link nav nav-link">
+    <a href="/home3" class="brand-link nav nav-link">
       <img src="<%= asset_path('AdminLTELogo.png') %>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-bold">AdminLte3</span>
@@ -34,27 +34,39 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="/home" class="nav-link <%= dynamically_active?(home_path) %>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="/home2" class="nav-link <%= dynamically_active?(home2_path) %>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="/home3" class="nav-link <%= dynamically_active?(home3_path) %>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/anviam_charts" class="nav-link <%= dynamically_active?(anviam_charts_path) %>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Anviam Charts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/anviam_tables" class="nav-link <%= dynamically_active?(anviam_tables_path) %>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Anviam Tables</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="/widgets" class="nav-link <%= dynamically_active?(widgets_path) %>">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Widgets
@@ -126,7 +138,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="/charts" class="nav-link <%= dynamically_active?(charts_path) %>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ChartJS</p>
                 </a>
